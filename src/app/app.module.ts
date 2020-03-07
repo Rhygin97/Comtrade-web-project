@@ -13,6 +13,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AboutComponent } from './home/about/about.component';
 import { NewsComponent } from './home/news/news.component';
 import { ReclamationComponent } from './home/reclamation/reclamation.component';
+import { FooterComponent } from './home/footer/footer.component';
 
 
 
@@ -26,7 +27,8 @@ import { ReclamationComponent } from './home/reclamation/reclamation.component';
     ContactUsComponent,
     AboutComponent,
     NewsComponent,
-    ReclamationComponent
+    ReclamationComponent,
+    FooterComponent
 
   ],
   imports: [

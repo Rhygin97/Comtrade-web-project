@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
-<div class="container">
+<div class="container" id="wrapper">
     <div class="row">
-        <div class="col-sm-2"></div>
+        <div class="col-sm-4"></div>
         <div class="col-sm-8">
             <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -42,10 +42,9 @@
                 </a>
             </div>
         </div>
-        <div class="col-sm-2"></div>
     </div>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-lg-12">
             <table class="table">
                 <thead>
                     <tr>
@@ -90,82 +89,4 @@
         </div>
     </div>
 </div>
-<footer id="footer" class="footer color-bg font-small">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-6 col-sm-4 col-md-4">
-                <div class="module-heading">
-                    <h4 class="module-title">KONTAKT </h4>
-                </div>
-                <div class="module-body">
-                    <ul class="toggle-footer">
-                        <li class="media">
-                            <div class="pull-left">
-                                <span class="icon fa-stack fa-lg">
-                                <fa-icon [icon]="faMapMarkerAlt"></fa-icon>   
-                            </span>
-                            </div>
-                            <div class="media-body">
-                                <p>Kneza Aleksandra 38</p>
-                                <p>Gornji Milanovac, Srbija</p>
-                            </div>
-                        </li>
-                        <li class="media">
-                            <div class="pull-left">
-                                <span class="icon fa-stack fa-lg">
-                                <fa-icon [icon]="faPhone"></fa-icon>   
-                            </span>
-                            </div>
-                            <div class="media-body">
-                                <p>+381 065/ 436-80-11</p>
-                            </div>
-                        </li>
-                        <li class="media">
-                            <div class="pull-left">
-                                <span class="icon fa-stack fa-lg">
-                                <fa-icon [icon]="faEnvelope"></fa-icon>   
-                            </span>
-                            </div>
-                            <div class="media-body">
-                                <p>office@prodaja.rs</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-4">
-                <div class="module-heading">
-                    <h4 class="module-title">INFORMACIJE </h4>
-                </div>
-                <div class="media-body">
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#">O nama</a>
-                        </li>
-                        <li>
-                            <a href="#">Novosti</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-4">
-                <div class="module-heading">
-                    <h4 class="module-title">DODATNE INFORMACIJE </h4>
-                </div>
-                <div class="media-body">
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#">Nacin reklamacije</a>
-                        </li>
-                        <li>
-                            <a href="#">Kontakt</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright text-center py-3">© 2020 Copyright
-
-  </div>
-</footer>
+<app-footer></app-footer>
