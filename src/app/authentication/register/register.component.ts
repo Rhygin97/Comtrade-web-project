@@ -3,6 +3,7 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { AuthenticationService } from '../authentication.service';
 import { StorageService } from 'src/app/shared/services/storage.service';
 import { Router } from '@angular/router';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-register',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-
+  faUser = faUser;
   registerForm: FormGroup;
   username;
   password;
