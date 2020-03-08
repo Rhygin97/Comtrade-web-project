@@ -34,7 +34,7 @@ const routes: Routes = [
         pathMatch: 'full'
       },
       {
-        path: 'contactUs',
+        path: 'contact',
         component: ContactUsComponent,
         pathMatch: 'full'
       },

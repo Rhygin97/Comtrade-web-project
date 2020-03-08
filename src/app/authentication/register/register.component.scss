@@ -11,8 +11,7 @@
     padding: 4px 36px 2px;
 }
 
-.sign-in-page {
-    margin-top: 150px;
+.sign-in {
     background-color: #fff;
     border: 1px #e5e5e5 solid;
     border-bottom: 2px #e5e5e5 solid;
@@ -25,18 +24,22 @@
     width: 66.667%;
 }
 
-.create-new-account h4 {
-    font-size: 18px;
-    font-family: 'Open Sans', sans-serif;
-    padding-bottom: 14px;
-    border-bottom: 1px solid #ddd;
-}
-
-.create-new-account p {
+.create-new-account {
+    h4 {
+        font-size: 18px;
+        font-family: 'Open Sans', sans-serif;
+        padding-bottom: 14px;
+        border-bottom: 1px solid #ddd;
+    }
+    p {
     font-size: 15px;
     color: #666;
+    }
 }
 
+.col-md-12 {
+    float: left;
+}
 .outer-top-xs {
     margin-top: 20px;
 }
@@ -47,16 +50,15 @@
     margin-bottom: 30px;
 }
 
-.title-solid h3 {
-    margin: 0;
-}
-
 .title-solid {
     text-transform: uppercase;
     background-color: #ee1d25;
     padding: 10px 15px;
     margin-bottom: 15px;
     color: white;
+    h3 {
+        margin: 0; 
+    }
 }
 
 .box-title {
@@ -64,13 +66,15 @@
     font-weight: bold;
 }
 
-.register-form .form-group {
-    margin-bottom: 25px;
-    position: relative;
-}
-.register-form label {
+.register-form {
+    .form-group {
+        margin-bottom: 25px;
+        position: relative;
+    }
+    label {
     font-size: 14px;
     font-weight: 400;
+    }
 }
 
 .form-control {
