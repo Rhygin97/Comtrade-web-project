@@ -7,6 +7,7 @@ import { ContactUsComponent } from './home/contact-us/contact-us.component';
 import { AboutComponent } from './home/about/about.component';
 import { NewsComponent } from './home/news/news.component';
 import { ReclamationComponent } from './home/reclamation/reclamation.component';
+import { ProfileComponent } from './home/profile/profile.component';
 
 
 const routes: Routes = [
@@ -51,6 +52,11 @@ const routes: Routes = [
       {
         path: 'reclamation',
         component: ReclamationComponent,
+        pathMatch: 'full'
+      },
+      {
+        path: 'profile',
+        component: ProfileComponent,
         pathMatch: 'full'
       }
     ]

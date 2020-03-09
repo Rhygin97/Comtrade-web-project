@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-light navbar-fluid" id="top-nav">
-    <div class="container-fluid collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="container collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li>
                 <fa-icon [icon]="faPhone"></fa-icon> 
@@ -18,29 +18,54 @@
         </ul>
     </div>
 </nav>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/home/main">LOGO</a>
+<nav class="navbar navbar-expand-md navbar-light navbar-fluid" id="main-header">
+    <div class="container collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto ">
+            <div class="logo navbar-brand">
+                <a href="/home/main">
+                    <img class="logo_main" src="http://placehold.it/350x100" alt="logo">
+                </a>
+            </div>
+        </div>
+        <div class="navbar-nav mx-auto">
+            <input type="text" class="form-control" id="mx-nav" placeholder="Pretrazi...">
+            <div class="input-group-append">
+                <button class="btn btn-warning" type="button">
+                    <fa-icon [icon]="faSearch"></fa-icon>
+                </button>
+            </div>
+          </div>
+        <div class="navbar-nav ml-auto" id="ml-nav">
+            <p>Stanje novca na racunu: 6440 RSD</p>
+            <div class="profile">
+                <a href="/home/profile">
+                    <fa-icon id="profileIcon" [icon]="faIdCard"></fa-icon>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light" id="bottom-nav">
+    <div class="container collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto menu-items">
+                <li [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" class="nav-item">
+                    <a class="nav-link" routerLink="/home/main" id="link-down">Pocetna </a>
+                </li>
+                <li routerLinkActive="active">
+                    <a class="nav-link" routerLink="/home/news" id="link-down">Novosti </a>
+                </li>
+                <li routerLinkActive="active">
+                    <a class="nav-link" routerLink="/home/contact" id="link-down">Kontakt </a>
+                </li>
+                <li routerLinkActive="active">
+                    <a class="nav-link" routerLink="/home/about" id="link-down">O nama </a>
+                </li>
+            </ul>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" class="nav-item">
-                <a class="nav-link" routerLink="/home/main">Pocetna </a>
-            </li>
-            <li routerLinkActive="active">
-                <a class="nav-link" routerLink="/home/news">Novosti </a>
-            </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-            <li routerLinkActive="active">
-                <a class="nav-link" routerLink="/home/contact">Kontakt </a>
-            </li>
-            <li routerLinkActive="active">
-                <a class="nav-link" routerLink="/home/about">O nama </a>
-            </li>
-        </ul>
-    </div>
+
+</div>
 </nav>

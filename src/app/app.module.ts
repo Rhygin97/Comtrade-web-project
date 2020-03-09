@@ -14,6 +14,7 @@ import { AboutComponent } from './home/about/about.component';
 import { NewsComponent } from './home/news/news.component';
 import { ReclamationComponent } from './home/reclamation/reclamation.component';
 import { FooterComponent } from './home/footer/footer.component';
+import { ProfileComponent } from './home/profile/profile.component';
 
 
 
@@ -28,7 +29,8 @@ import { FooterComponent } from './home/footer/footer.component';
     AboutComponent,
     NewsComponent,
     ReclamationComponent,
-    FooterComponent
+    FooterComponent,
+    ProfileComponent
 
   ],
   imports: [
