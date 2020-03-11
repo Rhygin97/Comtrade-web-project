@@ -1,1 +1,32 @@
-<p>login works!</p>
+<app-navbar></app-navbar>
+<div class="container sign-in">
+    <div class="row">
+        <div class="col-md-8 col-sm-8 customer-login move-left">
+            <h4 class="checkout-subtitle">Prijava</h4>
+            <p class="text">Dobrodošli, prijavite se na Vaš nalog.</p>   
+                <form class="login-form outer-top-xs" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div class="box-content">
+                        <div class="box-row-content-pane form-group col-md-12">
+                            <label for="username">Username</label>
+                            <input class="form-control" type="text" formControlName="username"
+                    placeholder="Enter your username" name="username">
+                        </div>
+                        <div class="box-row-content-pane form-group col-md-12">
+                            <label for="password">Password</label>
+                            <input class="form-control" type="password" formControlName="password"
+                            placeholder="Enter your password" name="password">
+                    </div>
+                    <div class="position">
+                    <div class="btn btn-custom" type="submit">
+                        Prijava
+                    </div>
+                    <a href="/authentication/register" class="btn btn-custom pull-right">
+                        Registrujte novi nalog
+                    </a>
+                </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<app-footer></app-footer>

@@ -1,36 +1,59 @@
-<div class="container">
-    <div class="row d-flex justify-content-center">
-        <div class="col-6">
-            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input class="form-control" type="text" formControlName="username" placeholder="Enter your username" name="username">
-                </div>
-
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input class="form-control" type="password" formControlName="password" placeholder="Enter your password" name="password">
-                </div>
-
-                <div class="form-group">
-                    <label for="confirmPassword">Confirm password</label>
-                    <input class="form-control" type="password" formControlName="confirmPassword" placeholder="Confirm your password" name="confirmPassword">
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input class="form-control" type="email" formControlName="username" placeholder="Enter your email">
-                </div>
-
-                <div class="form-group">
-                    <!-- Dodati disabled ako forma nije ispravna -->
-                    <!-- Ako forma nije ispravna, da pocrvene polja koja nisu ispravna -->
-                    <!-- registerForm.controls['polje_neko'].valid, .touched -->
-                    <button class="btn btn-primary" type="submit">
-                        Submit
-                    </button>
-                </div>
-            </form>
+<app-navbar></app-navbar>
+<div class="container sign-in">
+    <div class="row">
+        <div class="col-md-8 col-sm-8 create-new-account move-left">
+            <h4 class="checkout-subtitle">Registrujte novi nalog</h4>
+            <p class="text">Unesite podatke i kreirajte Vas nalog</p>
+            <div class="well">
+                <form class="register-form outer-top-xs row" id="customer_registration" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <div class="col-md-12">
+                        <div class="box-holder box">
+                            <div class="box-header">
+                                <div class="title-solid col-md-12">
+                                    <h3 class="box-title">
+                                        <fa-icon [icon]="faUser"></fa-icon> 
+                                        Profil
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="box-content">
+                                <div class="box-row-content-pane form-group col-md-12">
+                                    <label for="username">Username</label>
+                                    <input class="form-control" type="text" formControlName="username"
+                            placeholder="Enter your username" name="username">
+                                </div>
+                                <div class="box-row-content-pane form-group col-md-12">
+                                    <label for="email">E-mail</label>
+                                    <input class="form-control" type="email" formControlName="email"
+                            placeholder="Enter your email">
+                                </div>
+                                <div class="box-row-content-pane form-group col-md-12">
+                                    <label for="password">Password</label>
+                                    <div class="input-holder">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <input class="form-control" type="password" formControlName="password"
+                            placeholder="Enter your password" name="password">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input class="form-control" type="password" formControlName="confirmPassword"
+                            placeholder="Confirm your password" name="confirmPassword">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="btn btn-custom" type="submit">
+                            Register
+                        </div>
+                    </div>
+                </form>
         </div>
+        
     </div>
 </div>
+</div>
+<app-footer></app-footer>
