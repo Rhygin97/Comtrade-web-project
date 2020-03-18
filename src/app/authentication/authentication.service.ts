@@ -6,13 +6,14 @@ import { HttpClient } from '@angular/common/http'
 })
 export class AuthenticationService {
 
-  baseUrl = 'NEKI_LINK';
-  registerUrl = '';
-  loginUrl = '';
+  baseUrl = 'http://87.250.59.231:3000';
+  registerUrl = this.baseUrl + '/users';
+  loginUrl = this.baseUrl + '/users/authenticate';
 
   constructor(private http: HttpClient) { }
 
   registerUser(data) {
+    console.log(data);
     return this.http.post(this.registerUrl, data);
   }
 

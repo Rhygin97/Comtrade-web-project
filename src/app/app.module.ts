@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginComponent } from './authentication/login/login.component';
 import { RegisterComponent } from './authentication/register/register.component';
 import { MainComponent } from './home/main/main.component';
@@ -15,6 +15,7 @@ import { NewsComponent } from './home/news/news.component';
 import { ReclamationComponent } from './home/reclamation/reclamation.component';
 import { FooterComponent } from './home/footer/footer.component';
 import { ProfileComponent } from './home/profile/profile.component';
+import { TokenInterceptorService } from './shared/helpers/token-interceptor/token-interceptor.service';
 
 
 
@@ -41,7 +42,13 @@ import { ProfileComponent } from './home/profile/profile.component';
     ReactiveFormsModule,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

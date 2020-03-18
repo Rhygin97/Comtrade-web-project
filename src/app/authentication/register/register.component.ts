@@ -37,9 +37,9 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log("123");
     let data_json = JSON.stringify(this.registerForm.value);
-    this.authenticationService.registerUser(data_json)
-    .subscribe(
+    this.authenticationService.registerUser(data_json).subscribe(
       // Response catch http response with status >= 200 and < 400
       response => {
         localStorage.setItem("token", "asd123");

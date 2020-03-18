@@ -35,8 +35,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    this.authenticationService.loginUser(this.loginForm.value)
-    .subscribe(
+    this.authenticationService.loginUser(this.loginForm.value).subscribe(
       response => {
 
       },
