@@ -10,8 +10,7 @@ export class TokenInterceptorService implements HttpInterceptor {
   constructor(private storageService: StorageService) { }
 
   intercept(request: HttpRequest<any>, next: HttpHandler) {
-    // const token = this.storageService.getToken();
-    const token = null;
+    const token = this.storageService.getToken();
 
     if(token) {
       request = request.clone({

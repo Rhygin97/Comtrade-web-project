@@ -16,6 +16,7 @@ import { ReclamationComponent } from './home/reclamation/reclamation.component';
 import { FooterComponent } from './home/footer/footer.component';
 import { ProfileComponent } from './home/profile/profile.component';
 import { TokenInterceptorService } from './shared/helpers/token-interceptor/token-interceptor.service';
+import { ErrorInterceptorService } from './shared/helpers/error-interceptor/error-interceptor.service';
 
 
 
@@ -46,6 +47,11 @@ import { TokenInterceptorService } from './shared/helpers/token-interceptor/toke
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorInterceptorService,
       multi: true
     }
   ],

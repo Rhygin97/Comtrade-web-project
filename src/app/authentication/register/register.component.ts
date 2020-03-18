@@ -37,21 +37,14 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log("123");
-    let data_json = JSON.stringify(this.registerForm.value);
-    this.authenticationService.registerUser(data_json).subscribe(
-      // Response catch http response with status >= 200 and < 400
-      response => {
-        localStorage.setItem("token", "asd123");
-        this.router.navigate(["authentication/login"]);
-        // Ako je uspesno, sacuvaj token, i redirektuj na neku pocetnu stranicu
+    this.authenticationService.registerUser(this.registerForm.value).subscribe(
+      (response:any) => {
+        this.storageService.saveUser(JSON.stringify(response));
+        this.storageService.saveToken(response.authorization.token);
+        this.router.navigate(["home/main"]);
       },
-      // Error catch http response with status > 400 and < 500
       error => {
-        if(error.status > 400 && error.status < 500) {
-          console.log(error.status)
-        }
-        
+        console.log(error);
         // Console loguj gresku, da nije uspela registracija
         // Prikazi gresku na komponenti (register.html)
       }

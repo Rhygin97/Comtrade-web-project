@@ -8,20 +8,22 @@ export class StorageService {
   constructor() { }
 
   saveToken(token) {
-    // sacuvaj token pod nekim nazivom
+    localStorage.setItem('token', token);
   }
 
   getToken() {
-    // dohvati token pod istim nazivom kao sto si ga sacuvao
+    return localStorage.getItem('token');
   }
 
   clearStorage() {
-    // Ocisti local storage
+    localStorage.clear();
   }
 
-  // Napravi novi repozitorijum
-  // stavi mu gitignore za angular
-  // stavi mu readme da ima inicijalno (prazan ce biti verovatno)
-  // i kopiraj sve iz ovog foldera tamo
-  
+  saveUser(user) {
+    localStorage.setItem('user', user);
+  }
+
+  getUser() {
+    return JSON.parse(localStorage.getItem('user'));
+  }
 }
